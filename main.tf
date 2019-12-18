@@ -15,3 +15,8 @@
 provider "aws" {
   region = "${var.aws-region}"
 }
+
+module "create-table" {
+  source     = "./modules/10_create_table"
+  dyno-table = "${var.dyno-table}"
+}
